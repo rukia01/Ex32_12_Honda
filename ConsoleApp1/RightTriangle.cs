@@ -12,6 +12,11 @@ namespace AbstractSample
     {
         readonly public float width;
         readonly public float height;
+        /// <summary>
+        /// コンストラクタ
+        /// </summary>
+        /// <param name="width">底辺</param>
+        /// <param name="height">高さ</param>
         public RightTriangle(float width = 0, float height = 0)
         {
             this.width = width;
@@ -24,6 +29,11 @@ namespace AbstractSample
         public override float GetCircumference()
         {
             return width + height + MathF.Sqrt(width * width + height * height);
+        }
+        public override void GetBounds(out float width, out float height)
+        {
+            width = this.width;
+            height = this.height;
         }
     }
 }
