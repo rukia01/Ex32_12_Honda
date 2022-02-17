@@ -21,7 +21,7 @@ namespace Ex32
                 Console.WriteLine($"surfacesの面積は{surfaces[i].GetSurface()}");
                 Console.WriteLine($"surfacesの周囲長は{surfaces[i].GetCircumference()}");
                 surfaces[i].GetBounds(out width, out height);
-                Console.WriteLine($"surfacesは横{width}、縦{height}の大きさの四角形に収まる。");
+                Console.WriteLine($"surfacesは幅{width}、高さ{height}の大きさの四角形に収まる。");
             }
         }
     
