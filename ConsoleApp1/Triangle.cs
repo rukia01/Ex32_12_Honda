@@ -36,8 +36,7 @@ namespace AbstractSample
         public override void GetBounds(out float width, out float height)
         {
             width = side1;
-            float s = (side1 + side2 + side3) / 2;
-            float surface = MathF.Sqrt(s * (s - side1) * (s - side2) * (s - side3));
+            float surface = GetSurface();
             height = surface / (side1 / 2);
         }
     }
