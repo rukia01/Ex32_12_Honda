@@ -12,7 +12,6 @@ namespace AbstractSample
         readonly public float side1;
         readonly public float side2;
         readonly public float side3;
-        private float surface;
         /// <summary>
         /// コンストラクタ
         /// </summary>
@@ -28,8 +27,7 @@ namespace AbstractSample
         public override float GetSurface()
         {
             float s = (side1 + side2 + side3) / 2;
-            surface = MathF.Sqrt(s * (s - side1) * (s - side2) * (s - side3));
-            return surface;
+            return MathF.Sqrt(s * (s - side1) * (s - side2) * (s - side3));
         }
         public override float GetCircumference()
         {
@@ -38,6 +36,8 @@ namespace AbstractSample
         public override void GetBounds(out float width, out float height)
         {
             width = side1;
+            float s = (side1 + side2 + side3) / 2;
+            float surface = MathF.Sqrt(s * (s - side1) * (s - side2) * (s - side3));
             height = surface / (side1 / 2);
         }
     }
